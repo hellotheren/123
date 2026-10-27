@@ -135,7 +135,7 @@ local cfg = {
 		walkdynamic = false,
 		walkspeed2 = 1.5,
 		movement = "Walk",
-		tweenspeed = 120,
+		tweenspeed = 6,
 		jumpshortcuts = false,
 		cannon = false,
 	},
@@ -6975,14 +6975,12 @@ do
 			error("return", 0)
 		end
 
-		if cfg.vars.tweenspeed > 12 and _G.unlocktween ~= true then
-			cfg.vars.tweenspeed = 12
-		elseif cfg.vars.tweenspeed < 1 then
+		if cfg.vars.tweenspeed < 1 then
 			cfg.vars.tweenspeed = 1
 		end
 
 		stopMovement()
-		local maxVelocity = cfg.vars.tweenspeed * 10
+		local maxVelocity = cfg.vars.tweenspeed * math.huge
 		local travelTime = distanceTo(position2) / maxVelocity
 		local AlignPosition = Instance.new("AlignPosition")
 		AlignPosition.Mode = Enum.PositionAlignmentMode.OneAttachment
@@ -66716,7 +66714,7 @@ more accurate dodging]],
 							threads:Add("Autofarm", autofarmLoop)
 						end
 					end
-				end, 1, _G.unlocktween and 40 or 120, "vars", "tweenspeed", { Left = true })
+				end, 1, _G.unlocktween and 40 or 60, "vars", "tweenspeed", { Left = true })
 
 				Movement.AddLabel("Speeds above 70 and 8 are not recommended")
 				Movement.AddLabel("If your character is sliding or stuck on ledges change it")
