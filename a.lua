@@ -135,7 +135,7 @@ local cfg = {
 		walkdynamic = false,
 		walkspeed2 = 1.5,
 		movement = "Walk",
-		tweenspeed = 6,
+		tweenspeed = 120,
 		jumpshortcuts = false,
 		cannon = false,
 	},
@@ -66716,7 +66716,7 @@ more accurate dodging]],
 							threads:Add("Autofarm", autofarmLoop)
 						end
 					end
-				end, 1, _G.unlocktween and 40 or 60, "vars", "tweenspeed", { Left = true })
+				end, 1, _G.unlocktween and 40 or 120, "vars", "tweenspeed", { Left = true })
 
 				Movement.AddLabel("Speeds above 70 and 8 are not recommended")
 				Movement.AddLabel("If your character is sliding or stuck on ledges change it")
