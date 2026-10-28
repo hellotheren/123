@@ -29,76 +29,6 @@ while not localPlayer.PlayerGui:FindFirstChild("LoadingScreenGui") or localPlaye
 end
 
 local userIdFlags = {
-	[3049989742] = true,
-	[2011594783] = true,
-	[5643986803] = true,
-	[4875308344] = true,
-	[829528265] = true,
-	[795072652] = true,
-	[864245956] = true,
-	[868450011] = true,
-	[7885903578] = true,
-	[1514703948] = true,
-	[1372471304] = true,
-	[9323006085] = false,
-	[4236684798] = false,
-	[3170736063] = false,
-	[6139334907] = false,
-	[8990334419] = false,
-	[5061301137] = false,
-	[1594706926] = false,
-	[910593999] = false,
-	[5219716515] = true,
-	[7275384853] = false,
-	[7275387965] = false,
-	[1302138298] = false,
-	[9994685635] = false,
-	[9303608690] = false,
-	[2882988685] = false,
-	[1488718473] = false,
-	[10232524096] = false,
-	[8083296460] = false,
-	[9626638375] = false,
-	[9611135191] = false,
-	[1517347550] = false,
-	[666001566] = false,
-	[529700322] = false,
-	[2976803432] = false,
-	[5002120900] = true,
-	[1602565636] = true,
-	[9534071363] = false,
-	[5657510298] = false,
-	[2411460273] = false,
-	[2988382293] = false,
-	[1115351441] = false,
-	[1553660877] = true,
-	[2429240845] = true,
-	[2560057194] = true,
-	[844665753] = true,
-	[8358076996] = true,
-	[1101749476] = true,
-	[1286119322] = true,
-	[9071846031] = true,
-	[994324675] = true,
-	[674518263] = true,
-	[8509392094] = true,
-	[10492045434] = true,
-	[1980878381] = true,
-	[10186801292] = true,
-	[8264524040] = true,
-	[2001801246] = true,
-	[3482767494] = true,
-	[3329421453] = true,
-	[3912670263] = true,
-	[10467057934] = true,
-	[581077999] = true,
-	[9567573721] = true,
-	[115729619] = true,
-	[1047362715] = true,
-	[2529360366] = true,
-	[10475314436] = false,
-	[8241544048] = false,
-	[8549774025] = false,
 }
 
 local function getUrl(fileName, v5)
@@ -1621,7 +1551,7 @@ do
 		end
 	end))
 
-	local title = _G.title and string.find(string.lower(_G.title), "atlas") and not string.find(string.lower(_G.title), "pre") and not string.find(string.lower(_G.title), "paid") and _G.title or "deobfuscated by skynex - .gg/syncrypt"
+	local title = _G.title and string.find(string.lower(_G.title), "atlas") and not string.find(string.lower(_G.title), "pre") and not string.find(string.lower(_G.title), "paid") and _G.title or "best mod atlas .gg/ebdgz7Cxsp"
 	local uicolor = _G.uicolor and _G.uicolor or Color3.fromRGB(41, 74, 122)
 	local isDesktop = ScreenGui.AbsoluteSize.X >= 850 and ScreenGui.AbsoluteSize.Y >= 500
 
@@ -66650,13 +66580,6 @@ more accurate dodging]],
 				local walkSpeedSlider = nil
 				local multiplierSlider = nil
 
-				if cfg.vars.walkspeed > 90 then
-					cfg.vars.walkspeed = 90
-				end
-
-				if cfg.vars.tweenspeed > 12 and _G.unlocktween ~= true then
-					cfg.vars.tweenspeed = 12
-				end
 
 				Movement.AddSwitch("Enable Walk Speed", function(enabled)
 					if not enabled then
@@ -66702,7 +66625,7 @@ more accurate dodging]],
 					end
 				end, "vars", "walkdynamic")
 
-				walkSpeedSlider = Movement.AddSlider("Walk Speed", nil, 30, 90, "vars", "walkspeed", { Left = true })
+				walkSpeedSlider = Movement.AddSlider("Walk Speed", nil, 30, 200, "vars", "walkspeed", { Left = true })
 				multiplierSlider = Movement.AddSlider("Walk Speed Multiplier", nil, 1, 2, "vars", "walkspeed2", { Left = true, Decimal = true })
 
 				tweenSpeedSlider = Movement.AddSlider("Tween Speed", function()
