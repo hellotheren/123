@@ -1,5 +1,6 @@
 -- discord.gg/syncrypt
-
+_G.uicolor = Color3.fromRGB(88, 40, 140)
+_G.background  = "rbxassetid://9822123500"
 if _G.loading then return end
 _G.loading = true
 if not getthreadidentity or getthreadidentity()<8 then return(cloneref and cloneref(game:GetService("StarterGui")) or game:GetService("StarterGui")):SetCore("SendNotification",{Title="Warning",Text="Your executor is not supported.",Duration=10})end
